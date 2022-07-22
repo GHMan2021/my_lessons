@@ -52,6 +52,8 @@ class LinkedList:
                     self.head = node.next
                 else:
                     last_node.next = node.next
+                if node == self.tail:
+                    self.tail = last_node
                 if all is False:
                     return
             else:
