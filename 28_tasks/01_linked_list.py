@@ -61,10 +61,7 @@ class LinkedList:
             node = node.next
 
     def clean(self):
-        node = self.head
-        while node is not None:
-            self.head = None
-            node = node.next
+        self.__init__()
 
     def len(self):
         node = self.head
