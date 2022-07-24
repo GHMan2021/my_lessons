@@ -77,8 +77,12 @@ class LinkedList:
         if self.head is None:
             self.head = newNode
             return
+        if afterNode is None:
+            newNode.next = self.head
+            self.head = newNode
+            return
         node = self.find(afterNode.value)
-        if any([afterNode is None, node is None]):
+        if node is None:
             newNode.next = self.head
             self.head = newNode
             return
