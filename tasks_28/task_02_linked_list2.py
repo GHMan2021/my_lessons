@@ -60,7 +60,7 @@ class LinkedList2:
                     else:
                         node.prev.next = node.next
                         node.next.prev = node.prev
-                if all == False:
+                if all is False:
                     return
             node = node.next
 
