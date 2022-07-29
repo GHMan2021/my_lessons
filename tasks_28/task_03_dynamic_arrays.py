@@ -49,6 +49,11 @@ class DynArray:
         if i < 0 or i >= self.count:
             raise IndexError('Index is out of bounds')
 
+        if i == 0:
+            self.array[i] = 0
+            self.count -= 1
+            return
+
         if all([self.count - 1 < int(self.capacity // 2),
                 int(self.capacity // 1.5) > 16]):
             self.resize(int(self.capacity // 1.5))
