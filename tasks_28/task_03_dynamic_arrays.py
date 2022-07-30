@@ -48,9 +48,6 @@ class DynArray:
         if i < 0 or i >= self.count:
             raise IndexError('Index is out of bounds')
 
-        print(int(self.capacity // 2))  # 1
-        print(int(self.capacity // 1.5))  # 1
-
         if i == self.count - 1:
             self.array[i] = 0
             self.count -= 1
