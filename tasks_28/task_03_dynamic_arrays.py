@@ -45,13 +45,9 @@ class DynArray:
     def delete(self, i):
         if self.count == 0:
             return
+
         if i < 0 or i >= self.count:
             raise IndexError('Index is out of bounds')
-
-        if i == self.count - 1:
-            self.array[i] = 0
-            self.count -= 1
-            return
 
         if all([self.count - 1 < int(self.capacity // 2),
                 int(self.capacity // 1.5) >= 16]):
