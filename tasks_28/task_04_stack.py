@@ -6,12 +6,14 @@ class Stack:
         return len(self.stack)
 
     def pop(self):
-        # ваш код
-        return None # если стек пустой
+        if self.size() == 0:
+            return None
+        self.stack.pop()
 
     def push(self, value):
-        pass  # ваш код
+        self.stack.append(value)
 
     def peek(self):
-        # ваш код
-        return None # если стек пустой
+        if self.size() == 0:
+            return None
+        return self.stack[-1]
