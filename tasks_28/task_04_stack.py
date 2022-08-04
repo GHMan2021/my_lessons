@@ -6,10 +6,12 @@ class Stack:
         return len(self.stack)
 
     def pop(self):
-        if self.size() > 0:
-            self.stack.pop(0)
-        else:
+        if self.size() == 0:
             return None
+        elif self.size() == 1:
+            self.__init__()
+        else:
+            self.stack.pop(0)
 
     def push(self, value):
         self.stack.insert(0, value)
