@@ -8,15 +8,12 @@ class Stack:
     def pop(self):
         if self.size() == 0:
             return None
-        elif self.size() == 1:
-            self.__init__()
-        else:
-            self.stack.pop(0)
+        return self.stack.pop()
 
     def push(self, value):
-        self.stack.insert(0, value)
+        return self.stack.append(value)
 
     def peek(self):
         if self.size() == 0:
             return None
-        return self.stack[0]
+        return self.stack[-1]
