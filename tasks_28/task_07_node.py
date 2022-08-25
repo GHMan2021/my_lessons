@@ -22,10 +22,10 @@ class OrderedList:
     def add(self, value):
 
         if self.head is None:
-            self.head = value
+            self.head = Node(value)
             value.prev = None
             value.next = None
-            self.tail = value
+            self.tail = Node(value)
             return
 
         if self.__ascending:
