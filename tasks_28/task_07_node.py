@@ -34,7 +34,7 @@ class OrderedList:
             result_compared = 1
 
         v1 = self.head
-        v2 = value
+        v2 = Node(value)
         if self.compare(v1.value, v2.value) != result_compared:
             v2.prev = v1.prev
             v2.next = v1
