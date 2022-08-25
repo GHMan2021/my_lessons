@@ -23,8 +23,8 @@ class OrderedList:
 
         if self.head is None:
             self.head = Node(value)
-            value.prev = None
-            value.next = None
+            Node(value).prev = None
+            Node(value).next = None
             self.tail = Node(value)
             return
 
