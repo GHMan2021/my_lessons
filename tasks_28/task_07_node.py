@@ -40,6 +40,7 @@ class OrderedList:
             v2.next = v1
             v1.prev = v2
             self.head = v2
+            self.tail = v1
             return
 
         v1 = self.tail
@@ -48,6 +49,7 @@ class OrderedList:
             v2.next = v1.next
             v1.next = v2
             self.tail = v2
+            self.head = v1
             return
 
         for i in range(1, self.len()):
